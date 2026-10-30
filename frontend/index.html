@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Atlas | AI Security Chatbot</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Application Header -->
+        <header>
+            <h1>Project Atlas</h1>
+            <p>AI-Powered Campus Navigation Assistant</p>
+        </header>
+
+        <!-- Chatbot Section -->
+        <section class="chat-section">
+
+            <h2>Ask Our AI Assistant</h2>
+
+            <p>
+                Ask questions about Project Atlas,
+                its objectives, technologies, and milestones.
+            </p>
+
+            <!-- Chat messages appear here -->
+            <div id="chatBox" class="chat-box">
+                <div class="message bot">
+                    Hello! I'm the Project Atlas assistant.
+                    How can I help you?
+                </div>
+            </div>
+
+            <!-- User input -->
+            <form id="chatForm" class="input-group">
+
+                <input type="text" id="userInput" placeholder="Ask a question..." maxlength="2000" required>
+
+                <button type="submit" id="submitBtn">
+                    Submit
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Secret Verification Section -->
+        <section class="verify-section">
+
+            <h2>Verify Secret</h2>
+
+            <p>
+                Think you discovered our team's secret?
+                Enter it below to verify your guess.
+            </p>
+
+            <form id="verifyForm" class="input-group">
+
+                <input type="text" id="secretInput" placeholder="Enter suspected secret..." maxlength="200" required>
+
+                <button type="submit" id="verifyBtn">
+                    Verify Secret
+                </button>
+
+            </form>
+
+            <!-- Verification result -->
+            <p id="verifyResult" aria-live="polite"></p>
+
+        </section>
+
+        <footer>
+            <p>COMP4537 | Team prjC1</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

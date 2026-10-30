@@ -1,0 +1,248 @@
+/* ==================================
+   1. GLOBAL STYLES
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #f1f5f9;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* ==================================
+   2. MAIN CONTAINER
+================================== */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==================================
+   3. HEADER
+================================== */
+
+header {
+    background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #4b5563;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 15px;
+    color: #d1d5db;
+}
+
+/* ==================================
+   4. CHAT AND VERIFY SECTIONS
+================================== */
+
+.chat-section,
+.verify-section {
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    border: 1px solid #404040;
+}
+
+.chat-section h2,
+.verify-section h2 {
+    margin-bottom: 10px;
+    color: #f8fafc;
+}
+
+.chat-section p,
+.verify-section p {
+    margin-bottom: 20px;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+/* ==================================
+   5. CHATBOX
+================================== */
+
+.chat-box {
+    height: 350px;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+    border: 1px solid #4b5563;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ==================================
+   6. CHAT MESSAGES
+================================== */
+
+.message {
+    padding: 12px 16px;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 14px;
+    max-width: 80%;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+/* AI messages */
+.message.bot {
+    background-color: #3a3a3a;
+    color: #f1f5f9;
+    align-self: flex-start;
+    border-bottom-left-radius: 3px;
+}
+
+/* User messages */
+.message.user {
+    background-color: #525252;
+    color: #ffffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 3px;
+}
+
+/* ==================================
+   7. INPUTS AND BUTTONS
+================================== */
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #525252;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #1f1f1f;
+    color: #f8fafc;
+}
+
+.input-group input::placeholder {
+    color: #9ca3af;
+}
+
+.input-group input:focus {
+    border-color: #9ca3af;
+    box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.2);
+}
+
+button {
+    padding: 14px 22px;
+    background-color: #444444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #5a5a5a;
+}
+
+button:disabled {
+    background-color: #6b7280;
+    cursor: not-allowed;
+}
+
+/* ==================================
+   8. SECRET VERIFICATION
+================================== */
+
+.verify-section {
+    border-top: 4px solid #6b7280;
+}
+
+#verifyResult {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+#verifyResult.success {
+    color: #4ade80;
+}
+
+#verifyResult.error {
+    color: #f87171;
+}
+
+/* ==================================
+   9. FOOTER
+================================== */
+
+footer {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 13px;
+    padding: 10px;
+}
+
+/* ==================================
+   10. RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .chat-section,
+    .verify-section {
+        padding: 18px;
+    }
+
+    .chat-box {
+        height: 300px;
+        padding: 12px;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+}

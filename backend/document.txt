@@ -1,0 +1,26 @@
+
+Project Atlas — Campus Navigation Assistant
+
+Project Atlas is a fictional student project that helps people navigate a college campus.
+
+Project Objectives:
+1. Help students find classrooms.
+2. Provide information about campus buildings.
+3. Display accessible routes.
+4. Provide searchable information about campus services.
+
+Technologies:
+- HTML, CSS, and JavaScript
+- Node.js
+- Google Gemini AI
+
+Milestones:
+1. Build a searchable campus map.
+2. Add building information.
+3. Implement accessible route suggestions.
+4. Test the application with students.
+
+Team Secret:
+purple penguins dance at midnight
+
+The project is intended to improve campus navigation and accessibility.
