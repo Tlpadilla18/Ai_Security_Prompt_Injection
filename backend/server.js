@@ -1,4 +1,3 @@
-
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -7,7 +6,6 @@ const dotenv = require("dotenv");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 
-// 1. Load environment variables
 dotenv.config({
     path: path.join(__dirname, ".env")
 });
@@ -45,7 +43,9 @@ const verifyLimiter = rateLimit({
 });
 
 // 3. Read the COMPLETE document
-const documentPath = path.join(__dirname, "document.txt");
+const documentPath = 
+    process.env.DOCUMENT_PATH ||
+    path.join(__dirname, "document.txt");
 
 function loadDocument() {
     return fs.readFileSync(documentPath, "utf8");
